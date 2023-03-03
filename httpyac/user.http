@@ -1,0 +1,54 @@
+@host = http://localhost:8080
+
+###
+# @name create_customer
+
+POST /customers
+content-type: application/json
+
+{
+  "name": "Naruto",
+  "phone": "0123456790",
+  "address": "Ninja World",
+  "wallet": {
+    "accountNum": "1110",
+    "balance": 5000
+  }
+}
+
+###
+# @name get_customers
+
+GET /customers
+
+###
+# @name get_customer
+
+GET /customers/1
+
+###
+# @name create_staff
+
+POST /staves
+content-type: application/json
+
+{
+  "name": "Goku",
+  "phone": "0123456791",
+  "wallet": {
+    "accountNum": "1111",
+    "balance": 100
+  }
+}
+
+###
+# @name get_staves
+
+GET /staves
+
+###
+# @name get_staff
+
+GET /staves/1
+
+###

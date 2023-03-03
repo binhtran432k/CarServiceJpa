@@ -1,0 +1,24 @@
+@host = http://localhost:8080
+
+###
+# @name create_service
+
+POST /services
+content-type: application/json
+
+{
+  "name": "Car Batteries, Starting & Charging",
+  "fee": 200
+}
+
+###
+# @name get_services
+
+GET /services
+
+###
+# @name get_service
+
+GET /services/1
+
+###

@@ -1,0 +1,67 @@
+@host = http://localhost:8080
+
+###
+# @name create_service
+
+POST /orders
+content-type: application/json
+
+{
+  "note": "This is a note",
+  "timeOrder": "2023/10/20",
+  "timeEstimate": "2023/11/20",
+  "customerId": 1,
+  "staffIds": [1, 3],
+  "serviceIds": [1, 4],
+  "products": [
+    {
+      "name": "car",
+      "color": "red",
+      "status": "old"
+    },
+    {
+      "name": "truck",
+      "color": "blue",
+      "status": "nearly new"
+    }
+  ]
+}
+
+###
+# @name create_service_2
+
+POST /orders
+content-type: application/json
+
+{
+  "note": "This is a note",
+  "timeOrder": "2023/10/10",
+  "timeEstimate": "2023/11/20",
+  "customerId": 2,
+  "staffIds": [2],
+  "serviceIds": [3, 4],
+  "products": [
+    {
+      "name": "car",
+      "color": "pink",
+      "status": "old"
+    }
+  ]
+}
+
+###
+# @name get_services
+
+GET /orders
+
+###
+# @name get_service
+
+GET /orders/1
+
+###
+# @name done_service
+
+PUT /orders/1/done
+
+###
