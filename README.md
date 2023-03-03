@@ -21,3 +21,7 @@ This project using Spring boot with Jpa to perform a Car Service System.
 | GET /orders          | Get all orders                         |
 | GET /orders/:id      | Get an order with :id                  |
 | PUT /orders/:id/done | Done an order with :id (Update status) |
+
+# Example
+
+@see [httpyac](./httpyac/) folder
