@@ -3,6 +3,7 @@ package com.example.carservice.user;
 import java.util.Set;
 
 import com.example.carservice.common.NamedEntity;
+import com.example.carservice.order.Order;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -30,5 +31,8 @@ public class Customer extends NamedEntity {
 	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "wallet_id")
 	private Wallet wallet;
+
+	@OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
+	private Set<Order> orders;
 
 }

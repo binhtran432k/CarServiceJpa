@@ -24,4 +24,7 @@ public class Product extends NamedEntity {
 	@Column(name = "status", nullable = false)
 	private String status;
 
+	@ManyToMany(mappedBy = "products", fetch = FetchType.LAZY)
+	private Set<Order> orders;
+
 }
